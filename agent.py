@@ -1,8 +1,11 @@
 """Core agent loop: model call -> tool_use? -> execute -> feed back -> repeat."""
 
 import anthropic
+from dotenv import load_dotenv
 
 from tools import FETCH_URL_TOOL, fetch_url
+
+load_dotenv()
 
 MODEL = "claude-sonnet-5"
 MAX_TOKENS = 1024
